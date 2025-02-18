@@ -1,0 +1,66 @@
+@import url("https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/serif.css");
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: "Computer Modern Serif", serif;
+    font-size: larger;
+}
+
+p {
+    margin: 0;
+}
+
+
+#screen {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100%;
+}
+
+#interactions {
+    padding: 1em;
+    background-color: lightslategray;
+}
+
+#canvas-wrapper {
+    background-color: lightsteelblue;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+input,
+output {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.divider {
+    margin: 10px 0;
+    background-color: black;
+    height: 2px;
+}
+
+#sim_controls {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10%; */
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.sim-button {
+    aspect-ratio: 1;
+    width: 100%;
+}
+
+button {
+    background-color: cornflowerblue;
+}
+
+#group {
+    display: grid
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Normal Distribution</title>
+        <script src="../canvas.js" defer></script>
+        <script src="index.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+            async
+        ></script>
+        <link rel="stylesheet" href="../../style.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="main()">
+        <div id="screen">
+            <div id="interactions">
+                <div id="top_interactions">
+                    <p class="center">Odds</p>
+                    <div id="probabilities"></div>
+                    <p class="center">Probabilities</p>
+                    <div class="dice_icons">
+                        <div class="dice_icon">1</div>
+                        <div class="dice_icon">2</div>
+                        <div class="dice_icon">3</div>
+                        <div class="dice_icon">4</div>
+                        <div class="dice_icon">5</div>
+                        <div class="dice_icon">6</div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="slider">
+                        <p>Sum size:</p>
+                        <input type="range" id="sum_size_slide" />
+                        <output id="sum_size_output">0</output>
+                    </div>
+
+                    <div class="divider_small"></div>
+
+                    <!-- <p>Current roll:</p> -->
+                    <!-- <div class="dice_icons" id="roll_icons"></div> -->
+
+                    <!-- <div class="divider_small"></div> -->
+
+                    <output id="n_output"><i>n</i> = 0</output>
+                    <div id="data">
+                        <output id="m_output"><i>μ</i> = 0</output>
+                        <output id="s_output"><i>σ</i> = 0</output>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <p>
+                        \(p(x)=\dfrac{1}{\sqrt{2\pi\sigma^2}}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}\)
+                    </p>
+                    <p>
+                        \(\pi=\dfrac{1}{2\sigma^2}\left(\dfrac{1}{p(x)}e^{-\dfrac{(x-\mu)^2}{2\sigma^2}}\right)^2\)
+                    </p>
+
+                    <div class="divider_small"></div>
+
+                    <div class="slider">
+                        <output id="x"><i>x</i> = 0 </output>
+                        <input
+                            type="range"
+                            id="x_slide"
+                            style="float: right"
+                        /><br />
+                    </div>
+
+                    <output id="prob_x">\(p(x)=0\)</output>
+                    <br />
+                    <output id="approx">\(\pi\approx\)</output>
+                    <br />
+                    <output id="error">0% error</output>
+                </div>
+                <div id="bottom_interactions">
+                    <div class="divider"></div>
+                    <div id="sim_controls">
+                        <button type="button" class="sim-button" id="reset">
+                            reset
+                        </button>
+                        <button type="button" class="sim-button" id="play">
+                            play
+                        </button>
+                        <div class="sim-button" id="group">
+                            <button type="button" id="roll_increase">
+                                increase
+                            </button>
+                            <output id="roll_output">1 roll</output>
+                            <button type="button" id="roll_decrease">
+                                decrease
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bar_plot_wrapper">
+                <div id="bar_plot"></div>
+            </div>
+        </div>
+    </body>
+</html>

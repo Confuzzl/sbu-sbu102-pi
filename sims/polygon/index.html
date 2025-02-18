@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Polygon</title>
+        <script src="index.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+            async
+        ></script>
+        <link rel="stylesheet" href="../../style.css" />
+    </head>
+    <body onload="main()">
+        <div id="screen">
+            <div id="interactions">
+                <div class="slider">
+                    Radius:
+                    <br />
+                    <input
+                        type="range"
+                        min="100"
+                        max="300"
+                        value="100"
+                        step="10"
+                        id="radius_slide"
+                    />
+                    <output id="radius_output">r=</output>
+                </div>
+                <div class="slider">
+                    Sides:
+                    <br />
+                    <input
+                        type="range"
+                        min="3"
+                        max="64"
+                        value="3"
+                        id="side_slide"
+                    />
+                    <output id="side_output">n=</output>
+                </div>
+                <output id="side_length_output">Side length</output>
+                <output id="apothem_output">Apothem length</output>
+                <div class="divider"></div>
+                <div>
+                    <p>\(A=\pi r^2\approx n\dfrac{sh}{2}\)</p>
+                    <p>\(\pi=\dfrac{A}{r^2}\approx\dfrac{nsh}{2r^2}\)</p>
+                    <output id="area_pi">
+                        <p></p>
+                        <p>0% error</p>
+                    </output>
+                </div>
+                <div class="divider"></div>
+                <div>
+                    <p>\(C=2\pi r\approx ns\)</p>
+                    <p>\(\pi=\dfrac{C}{2r}\approx\dfrac{ns}{2r}\)</p>
+                    <output id="perimeter_pi">
+                        <p></p>
+                        <p>0% error</p>
+                    </output>
+                </div>
+            </div>
+            <div id="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </body>
+</html>

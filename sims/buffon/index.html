@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Buffon Needle</title>
+        <script src="../canvas.js" defer></script>
+        <script src="index.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+            async
+        ></script>
+        <link rel="stylesheet" href="../../style.css" />
+    </head>
+    <body onload="main()">
+        <div id="screen">
+            <div id="interactions">
+                <div class="slider">
+                    Spacing:
+                    <br />
+                    <input
+                        type="range"
+                        min="100"
+                        max="300"
+                        value="100"
+                        step="10"
+                        id="spacing_slide"
+                    />
+                    <output id="spacing_output">t=</output>
+                </div>
+                <div class="slider">
+                    Needle ratio:
+                    <br />
+                    <input
+                        type="range"
+                        min="0"
+                        max="0.99"
+                        value="0.5"
+                        step="0.01"
+                        id="needle_slide"
+                    />
+                    <output id="needle_output">r=</output>
+                    <output id="needle_length_output">Needle length l =</output>
+                </div>
+                <div class="divider"></div>
+                <div>
+                    <output id="needle_count">Needles: </output>
+                    <br />
+                    <output id="needle_touching_count"
+                        >Touching needles:
+                    </output>
+                    <p>
+                        \(p=\dfrac{2}{\pi}\cdot\dfrac{l}{t}=\dfrac{\text{
+                        touching needles}}{\text{needles}}\)
+                    </p>
+                    <p>
+                        \(\pi=\dfrac{2l}{pt}\approx\dfrac{2l\cdot\text{needles}}{t\cdot
+                        \text{touching needles}}\)
+                    </p>
+                    <output id="approx">\(\pi\approx\)</output>
+                    <br />
+                    <output id="error">0% error</output>
+                </div>
+                <div class="divider"></div>
+                <div id="sim_controls">
+                    <button type="button" class="sim-button" id="stop">
+                        stop
+                    </button>
+                    <button type="button" class="sim-button" id="play">
+                        play
+                    </button>
+                    <div type="button" class="sim-button" id="group">
+                        <button type="button" id="group_increase">
+                            increase
+                        </button>
+                        <output id="group_output"></output>
+                        <button type="button" id="group_decrease">
+                            decrease
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+    </body>
+</html>

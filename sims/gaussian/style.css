@@ -1,0 +1,104 @@
+::-webkit-scrollbar {
+    width: 1vmin;
+    height: 1vmin;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gainsboro;
+    border-radius: 0.5vmin;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 0.5vmin;
+}
+
+#interactions {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow-y: hidden;
+}
+
+#top_interactions {
+    overflow-y: auto;
+}
+
+.prob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.prob>input {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    display: block;
+    margin: 0 auto;
+    height: 5em;
+}
+
+#probabilities {
+    display: flex;
+    flex: 1;
+}
+
+.center {
+    text-align: center;
+}
+
+.dice_icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dice_icon {
+    flex-basis: 100%;
+    background-color: whitesmoke;
+    border-radius: 0.2em;
+    margin: 5px;
+    aspect-ratio: 1;
+    max-width: 4em;
+    text-align: center;
+    align-content: center;
+}
+
+#bar_plot_wrapper {
+    background-color: lightsteelblue;
+    display: flex;
+    padding: 1em;
+}
+
+#bar_plot {
+    width: 100%;
+    background-color: white;
+    padding: 1em 1em 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.bar {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bar_num {
+    text-align: center;
+    overflow: hidden;
+}
+
+#roll_output {
+    text-align: center;
+}
+
+.divider_small {
+    margin: 10px 1em;
+    background-color: black;
+    height: 1px;
+}
+
+#data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
