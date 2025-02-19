@@ -258,7 +258,7 @@ const barPlot = document.getElementById("bar_plot");
 const probabilities = document.getElementById("probabilities");
 const sumSize = new Slider(
     "sum_size_slide",
-    new Field(2, 64, sim.sumSize, 1),
+    new Field(2, 10, sim.sumSize, 1),
     (self) => {
         sim.updateSumSize(self.value());
     },
