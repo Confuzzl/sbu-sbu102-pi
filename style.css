@@ -64,3 +64,26 @@ button {
 #group {
     display: grid
 }
+
+#main_page {
+    background-color: lightslategray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#main_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 50%;
+    gap: 1em;
+}
+
+.to_sim_button {
+    aspect-ratio: 1;
+    width: 100%;
+    background-color: lightsteelblue;
+    text-align: center;
+    align-content: center;
+}
